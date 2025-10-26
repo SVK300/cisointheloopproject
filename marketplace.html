@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - CISOintheLoop.ai</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar sticky-header">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="CISOintheLoop.ai Logo" class="logo-image">
+                </a>
+            <div class="nav-links desktop-nav">                    <a href="index.html" class="nav-link">Home</a>                    <a href="governance-ops.html" class="nav-link">GovernanceOps</a>                    <a href="agent-ops.html" class="nav-link">AgentOps</a>                    <a href="marketplace.html" class="nav-link active">Marketplace</a>                    <a href="insights.html" class="nav-link">Insights</a>                    <a href="trust.html" class="nav-link">Trust Center</a>                </div>               <div class="nav-actions">
+                    <button class="search-icon" aria-label="Global Search">🔍</button>
+                    <a href="#" id="joinBetaNav" class="btn btn-primary btn-sm">Join Beta</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Marketplace</h1>
+            <p>Where CISOs and Developers Secure AI Together. Discover verified agents, share playbooks, and build trust.</p>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+        <div class="marketplace-controls" style="margin-bottom: 2rem;">
+            <h2 style="margin-bottom: 1rem;">Community Marketplace: Playbooks, Agents, & Intelligence</h2>
+            <div class="filter-pills" style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 1rem;">
+                <button class="filter-pill active" data-filter="all">🔒 Verified Agents</button>
+                <button class="filter-pill" data-filter="playbooks">🧠 Playbooks</button>
+                <button class="filter-pill" data-filter="prompts">Prompt Library</button>
+                <button class="filter-pill" data-filter="reviews">💬 Reviews</button>
+                <button class="filter-pill" data-filter="developers">💼 Developer Listings</button>
+            </div>
+            <input type="search" class="form-input" placeholder="Search titles, partners, and categories..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd;">
+        </div>
+
+        <div class="marketplace-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+            <div class="item-card" data-filter="agent">
+                <div class="card-header">
+                    <div class="item-icon" style="background: rgba(37, 99, 235, 0.1); color: #2563eb;">🧠</div>
+                    <h3 class="item-title">BEC Defense Agent</h3>
+                </div>
+                <p class="item-description">Detects contextual phishing & email fraud (Accuracy 94%).</p>
+                <div class="badges" style="display: flex; gap: 5px; margin-top: 10px;">
+                    <span class="badge" style="background-color: #10b981; color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem;">AI-Safe</span>
+                    <span class="badge" style="background-color: #f59e0b; color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem;">Trust Score: 94</span>
+                </div>
+                <p style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;">Security 95 | Reliability 90 | Fairness 88</p>
+                <a href="detail-page.html" class="btn btn-outline btn-full">View Details →</a>
+            </div>
+            <div class="item-card" data-filter="plugin">
+                <div class="card-header">
+                    <div class="item-icon" style="background: rgba(236, 72, 153, 0.1); color: #ec4899;">🕵️</div>
+                    <h3 class="item-title">Fraud Classifier Plugin</h3>
+                </div>
+                <p class="item-description">Flags extortion, fake IDs, ransomware (0.85 AUC).</p>
+                <div class="badges" style="display: flex; gap: 5px; margin-top: 10px;">
+                    <span class="badge" style="background-color: #f59e0b; color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem;">Misuse Resistant</span>
+                    <span class="badge" style="background-color: #2563eb; color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem;">Trust Score: 85</span>
+                </div>
+                <p style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;">Security 92 | Reliability 88 | Fairness 85</p>
+                <a href="detail-page.html" class="btn btn-outline btn-full">View Details →</a>
+            </div>
+            <div class="item-card" data-filter="governance">
+                <div class="card-header">
+                    <div class="item-icon" style="background: rgba(6, 182, 212, 0.1); color: #06b6d4;">🌍</div>
+                    <h3 class="item-title">Data Sovereignty Checker</h3>
+                </div>
+                <p class="item-description">Ensures UAE/EU data compliance – scoped APIs.</p>
+                <div class="badges" style="display: flex; gap: 5px; margin-top: 10px;">
+                    <span class="badge" style="background-color: #06b6d4; color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem;">Sovereign Ready</span>
+                    <span class="badge" style="background-color: #10b981; color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem;">Trust Score: 96</span>
+                </div>
+                <p style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;">Security 98 | Reliability 95 | Fairness 94</p>
+                <a href="detail-page.html" class="btn btn-outline btn-full">View Details →</a>
+            </div>
+            <div class="item-card" data-filter="playbook">
+                <div class="card-header">
+                    <div class="item-icon" style="background: rgba(139, 92, 246, 0.1); color: #8b5cf6;">🧾</div>
+                    <h3 class="item-title">NIST Compliance Mapper</h3>
+                </div>
+                <p class="item-description">Maps to NIST AI RMF + ISO 42001 in seconds.</p>
+                <div class="badges" style="display: flex; gap: 5px; margin-top: 10px;">
+                    <span class="badge" style="background-color: #8b5cf6; color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem;">Compliant By Design</span>
+                    <span class="badge" style="background-color: #2563eb; color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem;">Trust Score: 93</span>
+                </div>
+                <p style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;">Security 94 | Reliability 92 | Fairness 91</p>
+                <a href="detail-page.html" class="btn btn-outline btn-full">View Details →</a>
+            </div>
+            <div class="item-card" data-filter="agent">
+                <div class="card-header">
+                    <div class="item-icon" style="background: rgba(255, 153, 0, 0.1); color: #ff9900;">🔒</div>
+                    <h3 class="item-title">Firewall Audit Agent</h3>
+                </div>
+                <p class="item-description">Autonomous config audits + runtime alerts.</p>
+                <div class="badges" style="display: flex; gap: 5px; margin-top: 10px;">
+                    <span class="badge" style="background-color: #ff9900; color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem;">Verified CISO</span>
+                    <span class="badge" style="background-color: #10b981; color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem;">Trust Score: 89</span>
+                </div>
+                <p style="color: #94a3b8; font-size: 0.75rem; margin-top: 0.5rem;">Security 90 | Reliability 91 | Fairness 87</p>
+                <a href="detail-page.html" class="btn btn-outline btn-full">View Details →</a>
+            </div>
+            <!-- Agent Flow Builder (Orchestrator) is now a separate section, removing it from here -->
+            <!-- Sample Card 1 -->
+
+            
+            <!-- CISO Core Value Card 4: Integration Depth -->
+            <div class="item-card" data-filter="integrations">
+                <div class="card-header">
+                    <div class="item-icon">🔌</div>
+                    <h3 class="item-title">Vercel Deploy Scanner Agent</h3>
+                </div>
+                <p class="item-description">Integration Agent for Vercel that auto-scans edge functions for prompt leaks and injects governance checks pre-production. **Developer Bounty Available.**</p>
+                <p class="item-tagline">Integrations · AgentOps</p>
+                <span class="data-residency-tag">Data Residency: Global</span>
+                <a href="detail-page.html" class="btn btn-outline btn-full">View Bounty →</a>
+            </div>
+            <!-- Sample Card 2 -->
+            <div class="item-card">
+                <div class="card-header">
+                    <div class="item-icon">📋</div>
+                    <h3 class="item-title">Compliance Mapper</h3>
+                </div>
+                <p class="item-description">Auto-maps AI controls to NIST, EU AI Act, ISO 42001, and custom frameworks.</p>
+                <p class="item-tagline">GovernanceOps · PrivacyOps</p>                <span class="data-residency-tag">Data Residency: EU | UAE</span>
+                <a href="detail-page.html" class="btn btn-outline btn-full">View Details →</a>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+    </main>
+        
+        
+
+
+
+    <section class="section" style="background-color: #0f172a; padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: #E2E8F0;">How to Use the Marketplace</h2>
+                <p class="section-lead" style="color: #94a3b8;">The CISOintheLoop marketplace is designed for two main workflows.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" style="background-color: #1e293b; border-color: #334155; border-radius: 8px;">
+                    <div class="feature-icon" style="color: #2563eb; background: rgba(37, 99, 235, 0.1);">1.</div>
+                    <h3 style="color: #E2E8F0;">Download & Deploy</h3>
+                    <p style="color: #94a3b8;">Download static agents created by peers, verified by our CISO Council. Deploy directly into your environment.</p>
+                </div>
+                <div class="feature-card" style="background-color: #1e293b; border-color: #334155; border-radius: 8px;">
+                    <div class="feature-icon" style="color: #10b981; background: rgba(16, 185, 129, 0.1);">2.</div>
+                    <h3 style="color: #E2E8F0;">Post & Build</h3>
+                    <p style="color: #94a3b8;">Post your own chaining requirement for developers to build on. Accelerate your internal agent development.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="agent-ops.html" class="btn btn-primary btn-lg">Build an Agent →</a>
+                <a href="governance-ops.html" class="btn btn-outline-white btn-lg">Assess Your Readiness →</a>
+            </div>
+        </div>
+    </section>
+    </main>
+        
+	    <footer class="footer">
+	        <div class="container">
+	            <p class="footer-tagline">Trusted by CISOs · Empowered by Engineers · Data hosted in UAE & EU</p>
+	            
+	            <p class="footer-copy">&copy; 2025 CISO in the Loop. All rights reserved.</p>
+	        </div>
+	    </footer>
+	
+	    <script src="script.js"></script>
+	    <script src="persona-modal.js"></script>
+	</body>
+	</html>

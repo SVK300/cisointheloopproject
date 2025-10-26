@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CISOintheLoop.ai — AI Security Marketplace + Knowledge Hub</title>
+    <meta name="description" content="From CISOs to Security Engineers — explore playbooks, agents, and insights that unify governance and runtime defense.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar sticky-header">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="CISOintheLoop.ai Logo" class="logo-image">
+                </a>                <div class="nav-links desktop-nav">                    <a href="index.html" class="nav-link active">Home</a>                    <a href="governance-ops.html" class="nav-link">GovernanceOps</a>                    <a href="agent-ops.html" class="nav-link">AgentOps</a>                    <a href="marketplace.html" class="nav-link">Marketplace</a>                    <a href="insights.html" class="nav-link">Insights</a>                    <a href="trust.html" class="nav-link">Trust Center</a>                </div>            <div class="nav-actions">
+                    <button class="search-icon" aria-label="Global Search">🔍</button>
+                    <a href="#" id="joinBetaNav" class="btn btn-primary btn-sm">Join Beta</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="marketplace.html" class="mobile-nav-link">Marketplace</a>
+        <a href="insights.html" class="mobile-nav-link">Insights</a>
+        <a href="trust.html" class="mobile-nav-link">Trust Center</a>
+        <a href="partners.html" class="mobile-nav-link">Partners</a>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="#" id="joinBetaMobile" class="btn btn-primary mobile-nav-link">Join Beta</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">The Defensive Agentic Hub — Where Governance, Trust, and Runtime Intelligence Converge.</h1>               <p class="hero-description">From CISOs to developers — assess, build, and automate secure AI.</p>
+                <div class="hero-buttons">
+                    <a href="ai-readiness.html" id="startAIReadinessCTA" class="btn btn-primary btn-lg">Assess My AI Readiness →</a>
+                    <a href="mailto:info@cisointheloop.ai?subject=Join%20Beta" id="joinBetaHero" class="btn btn-outline-white btn-lg">Join Beta →</a>
+                    <a href="marketplace.html" class="btn btn-outline-white btn-lg">Discover Verified Agents →</a>
+                </div>
+                <div class="scroll-cue">↓ Explore the Marketplace</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Loop Diagram Section -->
+    <section class="container section" style="text-align: center;">
+        <h2 style="color: #E2E8F0; margin-bottom: 2rem;">The Trust Loop: How It Works</h2>
+        <div style="background-color: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 3rem; margin-bottom: 3rem; text-align: center;">
+            <img src="trustloop.png" alt="CISO in the Loop Trust Loop Diagram: GovernanceOps to AgentOps to RuntimeOps to Intelligence" style="max-width: 400px; width: 100%; height: auto; display: block; margin: 0 auto;">
+        </div>
+
+        <!-- Functional Pillars -->
+        <h3 style="color: #E2E8F0; margin-bottom: 2rem;">Five Functional Pillars That Set Us Apart</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+            <a href="#" style="text-decoration: none;">
+                <div style="background-color: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 2rem; transition: all 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🧮</div>
+                    <h4 style="color: #E2E8F0; margin-bottom: 0.5rem;">Trust-Scoring Engine</h4>
+                    <p style="color: #94a3b8; font-size: 0.9rem;">Dynamic scoring – adaptive weights per risk.</p>
+                </div>
+            </a>
+            <a href="#" style="text-decoration: none;">
+                <div style="background-color: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 2rem; transition: all 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🧠</div>
+                    <h4 style="color: #E2E8F0; margin-bottom: 0.5rem;">Fraud Classifier</h4>
+                    <p style="color: #94a3b8; font-size: 0.9rem;">Detects vibe-hacking & no-code malware.</p>
+                </div>
+            </a>
+            <a href="#" style="text-decoration: none;">
+                <div style="background-color: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 2rem; transition: all 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🧪</div>
+                    <h4 style="color: #E2E8F0; margin-bottom: 0.5rem;">Adaptive Cyber Range</h4>
+                    <p style="color: #94a3b8; font-size: 0.9rem;">Simulates misuse & chaining attacks.</p>
+                </div>
+            </a>
+            <a href="#" style="text-decoration: none;">
+                <div style="background-color: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 2rem; transition: all 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📜</div>
+                    <h4 style="color: #E2E8F0; margin-bottom: 0.5rem;">Model Cards + Compliance</h4>
+                    <p style="color: #94a3b8; font-size: 0.9rem;">Auto-generate audit-ready AI cards.</p>
+                </div>
+            </a>
+            <a href="#" style="text-decoration: none;">
+                <div style="background-color: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 2rem; transition: all 0.3s ease;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔁</div>
+                    <h4 style="color: #E2E8F0; margin-bottom: 0.5rem;">Marketplace Economy</h4>
+                    <p style="color: #94a3b8; font-size: 0.9rem;">CISOs review · Devs stake · Trust scales.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Section 1: What's Inside the Marketplace (Moved and Renamed) -->
+    <section class="section bg-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What's Inside the Marketplace</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Playbooks</h3>
+                    <p>Pre-built, auditable security recipes for governance and compliance.</p>
+                    <a href="marketplace.html?filter=governance" class="feature-link">Explore Playbooks →</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Agents</h3>
+                    <p>Runtime enforcement and monitoring tools for proactive defense.</p>
+                    <a href="marketplace.html?filter=agentops" class="feature-link">Explore Agents →</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Intelligence</h3>
+                    <p>Threat models, regulatory mappings, and expert insights.</p>
+                    <a href="marketplace.html?filter=privacy" class="feature-link">Explore Intelligence →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Section 2: Latest Insights -->
+    <section class="section bg-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Field Notes & CISO Briefs</h2>
+            </div>
+            <div class="insights-feed-placeholder" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                <div class="insight-card-placeholder" style="border: 1px solid #eee; padding: 20px; border-radius: 8px;">
+                    <h4>AI Regulation Update: What CISOs Need to Know</h4>
+                    <p>A breakdown of the latest regulatory changes impacting AI security...</p>
+                    <p style="font-size: 0.8rem; color: #94A3B8; margin-top: 1rem;">Last Updated: Oct 2025 · Verified by CISO Council</p>
+                </div>
+                <div class="insight-card-placeholder" style="border: 1px solid #eee; padding: 20px; border-radius: 8px;">
+                    <h4>New Playbook: NIST AI RMF 3.1 Compliance</h4>
+                    <p>Automate your compliance journey with our new, comprehensive playbook...</p>
+                    <p style="font-size: 0.8rem; color: #94A3B8; margin-top: 1rem;">Last Updated: Oct 2025 · Verified by Security Team</p>
+                </div>
+                <div class="insight-card-placeholder" style="border: 1px solid #eee; padding: 20px; border-radius: 8px;">
+                    <h4>Partner News: Announcing our Integration with Snyk</h4>
+                    <p>Strengthening the security of the AI development lifecycle together...</p>
+                    <p style="font-size: 0.8rem; color: #94A3B8; margin-top: 1rem;">Last Updated: Oct 2025 · Verified by Partners</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="insights.html" class="btn btn-outline btn-lg">View All Insights →</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Section: Social Proof & Credibility -->
+    <section class="section bg-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Proven Results</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3 style="color: #E2E8F0; font-size: 1.8rem;">60%</h3>
+                    <p style="color: #94a3b8;">Audit Effort Reduction</p>
+                </div>
+                <div class="feature-card">
+                    <h3 style="color: #E2E8F0; font-size: 1.8rem;">30×</h3>
+                    <p style="color: #94a3b8;">Faster Compliance</p>
+                </div>
+                <div class="feature-card">
+                    <h3 style="color: #E2E8F0; font-size: 1.8rem;">20%</h3>
+                    <p style="color: #94a3b8;">Deployment Time Saved – Pilot CISO Program</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Pricing & Access Tiers -->
+    <section class="section bg-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pricing & Access Tiers</h2>
+                <p class="section-lead">Choose the plan that fits your organization.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div style="background-color: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 2rem; text-align: center;">
+                    <h3 style="color: #E2E8F0; margin-bottom: 1rem;">Free</h3>
+                    <p style="color: #94a3b8; margin-bottom: 1rem;">Basic Playbooks + Community Forum</p>
+                    <h2 style="color: #10b981; margin-bottom: 1rem;">$0</h2>
+                    <a href="#" class="btn btn-outline-white btn-full">Get Started</a>
+                </div>
+                <div style="background-color: #1e293b; border: 2px solid #06b6d4; border-radius: 8px; padding: 2rem; text-align: center;">
+                    <h3 style="color: #E2E8F0; margin-bottom: 1rem;">Pro</h3>
+                    <p style="color: #94a3b8; margin-bottom: 1rem;">Verified Agents + Cyber Range Tests</p>
+                    <h2 style="color: #06b6d4; margin-bottom: 1rem;">$99<span style="font-size: 1rem;">/mo</span></h2>
+                    <a href="#" class="btn btn-primary btn-full">Join Beta</a>
+                </div>
+                <div style="background-color: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 2rem; text-align: center;">
+                    <h3 style="color: #E2E8F0; margin-bottom: 1rem;">Enterprise</h3>
+                    <p style="color: #94a3b8; margin-bottom: 1rem;">API Access + Chaining Ops</p>
+                    <h2 style="color: #E2E8F0; margin-bottom: 1rem;">Custom</h2>
+                    <a href="mailto:info@cisointheloop.ai?subject=Enterprise%20Inquiry" class="btn btn-outline-white btn-full">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Join the Beta -->
+    <section class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title">Join the Beta / Community</h2>
+            <p class="section-subtitle">Be the first to access new playbooks, agents, and exclusive insights.</p>
+            <a href="mailto:info@cisointheloop.ai?subject=Join%20Beta" id="joinBetaFooter" class="btn btn-primary btn-lg">Join Beta →</a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-tagline">Trusted by CISOs · Empowered by Engineers · Data hosted in UAE & EU</p>
+            
+            <p class="footer-copy">&copy; 2025 CISO in the Loop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Persona Selection Modal --><div id="personaModal" class="persona-modal">    <div class="modal-content">        <h2>Who are you?</h2>        <p>Select your role to personalize your experience.</p>        <div class="persona-grid">            <div class="persona-card" data-persona="ciso">
+                <div class="icon">🛡️</div>
+                <h3>CISO / Security Leader</h3>
+                <p>"I manage risk, compliance, and strategy."</p>
+                <div class="tagline">CISO — Governance</div>
+            </div>      <div class="persona-card" data-persona="analyst">
+                <div class="icon">📈</div>
+                <h3>Security Analyst / Researcher</h3>
+                <p>"I analyze threats and report findings."</p>
+                <div class="tagline">Analyst — Detection</div>
+            </div>        <div class="persona-card" data-persona="builder">
+                <div class="icon">💻</div>
+                <h3>Developer / Builder</h3>
+                <p>"I build and secure AI applications."</p>
+                <div class="tagline">Developer — Integration</div>
+            </div>      </div>        <button id="skipPersona" class="skip-button">Continue Without Personalization</button>    </div></div>    <script src="script.js"></script>
+    <script src="persona-modal.js"></script>
+</body>
+</html>
+

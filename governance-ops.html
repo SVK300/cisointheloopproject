@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GovernanceOps - CISOintheLoop.ai</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar sticky-header">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="CISOintheLoop.ai Logo" class="logo-image">
+                </a>
+                <div class="nav-links desktop-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="governance-ops.html" class="nav-link active">GovernanceOps</a>
+                    <a href="agent-ops.html" class="nav-link">AgentOps</a>
+                    <a href="marketplace.html" class="nav-link">Marketplace</a>
+                    <a href="insights.html" class="nav-link">Insights</a>
+                    <a href="trust.html" class="nav-link">Trust Center</a>
+                </div>
+                <div class="nav-actions">
+                    <button class="search-icon" aria-label="Global Search">🔍</button>
+                    <a href="#" id="joinBetaNav" class="btn btn-primary btn-sm">Join Beta</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>GovernanceOps</h1>
+            <p class="section-lead">Assess, govern, and define AI risk policies. Discover agents that match your maturity level.</p>
+        </div>
+    </header>
+
+    <main class="container section">
+        <section class="readiness-assessment readiness-section">
+            <h2 class="text-center">AI Readiness Assessment</h2>
+            <p class="text-center section-subtitle">Answer 5 quick questions to evaluate your organization's AI security posture and get personalized agent recommendations.</p>
+            
+            <!-- Progress Bar -->
+            <div style="margin: 2rem 0;">
+                <div style="background-color: #334155; height: 8px; border-radius: 4px; overflow: hidden;">
+                    <div id="progressBar" style="background: linear-gradient(90deg, #2563eb, #10b981); height: 100%; width: 0%; transition: width 0.3s ease;"></div>
+                </div>
+                <p style="text-align: center; color: #94a3b8; margin-top: 0.5rem; font-size: 0.9rem;"><span id="currentQuestion">1</span> of 5 questions</p>
+            </div>
+
+            <div class="readiness-quiz">
+                <div class="quiz-question-card">
+                    <h3>Question 1 of 5: Governance</h3>
+                    <p>Do you have a formal, documented policy for AI model risk management and ethical use?</p>
+                    <div class="quiz-options">
+                        <button class="btn btn-outline-white">Yes, fully implemented</button>
+                        <button class="btn btn-outline-white">In progress</button>
+                        <button class="btn btn-outline-white">No, but planned</button>
+                        <button class="btn btn-outline-white">No</button>
+                    </div>
+                </div>
+                <div class="quiz-question-card">
+                    <h3>Question 2 of 5: Visibility</h3>
+                    <p>Can you monitor and audit all data inputs, model outputs, and API calls in real-time?</p>
+                    <div class="quiz-options">
+                        <button class="btn btn-outline-white">Yes, fully implemented</button>
+                        <button class="btn btn-outline-white">In progress</button>
+                        <button class="btn btn-outline-white">No, but planned</button>
+                        <button class="btn btn-outline-white">No</button>
+                    </div>
+                </div>
+                <div class="quiz-question-card">
+                    <h3>Question 3 of 5: Defense</h3>
+                    <p>Do you have automated runtime defenses against prompt injection, data poisoning, and model evasion?</p>
+                    <div class="quiz-options">
+                        <button class="btn btn-outline-white">Yes, fully implemented</button>
+                        <button class="btn btn-outline-white">In progress</button>
+                        <button class="btn btn-outline-white">No, but planned</button>
+                        <button class="btn btn-outline-white">No</button>
+                    </div>
+                </div>
+                <div class="quiz-question-card">
+                    <h3>Question 4 of 5: Development</h3>
+                    <p>Are security checks (SAST/DAST) integrated into your CI/CD pipeline for all AI-enabled applications?</p>
+                    <div class="quiz-options">
+                        <button class="btn btn-outline-white">Yes, fully implemented</button>
+                        <button class="btn btn-outline-white">In progress</button>
+                        <button class="btn btn-outline-white">No, but planned</button>
+                        <button class="btn btn-outline-white">No</button>
+                    </div>
+                </div>
+                <div class="quiz-question-card">
+                    <h3>Question 5 of 5: Data Sovereignty</h3>
+                    <p>Can you guarantee that sensitive data used by your AI models remains within specific geographic boundaries (e.g., EU, UAE)?</p>
+                    <div class="quiz-options">
+                        <button class="btn btn-outline-white">Yes, fully implemented</button>
+                        <button class="btn btn-outline-white">In progress</button>
+                        <button class="btn btn-outline-white">No, but planned</button>
+                        <button class="btn btn-outline-white">No</button>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 3rem;">
+                    <button class="btn btn-primary btn-lg" id="submitQuiz">Get My Readiness Score →</button>
+                </div>
+            </div>
+
+            <!-- Results Section (Hidden by default) -->
+            <div id="resultsSection" style="display: none; margin-top: 3rem;">
+                <h3 style="color: #E2E8F0; text-align: center; margin-bottom: 2rem;">Your AI Readiness Score</h3>
+                
+                <!-- Readiness Score Card -->
+                <div style="background-color: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 2rem; text-align: center; margin-bottom: 2rem;">
+                    <div style="font-size: 3rem; font-weight: 700; color: #2563eb; margin-bottom: 0.5rem;" id="scoreValue">72</div>
+                    <p style="color: #94a3b8; margin-bottom: 1rem;">Overall AI Security Maturity</p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+                        <div style="background-color: #0f172a; padding: 1rem; border-radius: 6px;">
+                            <p style="color: #94a3b8; font-size: 0.9rem;">Governance</p>
+                            <p style="color: #2563eb; font-weight: 700; font-size: 1.25rem;">65</p>
+                        </div>
+                        <div style="background-color: #0f172a; padding: 1rem; border-radius: 6px;">
+                            <p style="color: #94a3b8; font-size: 0.9rem;">Visibility</p>
+                            <p style="color: #10b981; font-weight: 700; font-size: 1.25rem;">78</p>
+                        </div>
+                        <div style="background-color: #0f172a; padding: 1rem; border-radius: 6px;">
+                            <p style="color: #94a3b8; font-size: 0.9rem;">Defense</p>
+                            <p style="color: #f59e0b; font-weight: 700; font-size: 1.25rem;">72</p>
+                        </div>
+                        <div style="background-color: #0f172a; padding: 1rem; border-radius: 6px;">
+                            <p style="color: #94a3b8; font-size: 0.9rem;">Development</p>
+                            <p style="color: #ec4899; font-weight: 700; font-size: 1.25rem;">68</p>
+                        </div>
+                        <div style="background-color: #0f172a; padding: 1rem; border-radius: 6px;">
+                            <p style="color: #94a3b8; font-size: 0.9rem;">Data Sovereignty</p>
+                            <p style="color: #06b6d4; font-weight: 700; font-size: 1.25rem;">82</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommended Agents & Export -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                    <div style="background-color: rgba(37, 99, 235, 0.05); border: 1px solid rgba(37, 99, 235, 0.2); border-radius: 8px; padding: 1.5rem; text-align: center;">
+                        <h4 style="color: #E2E8F0; margin-bottom: 1rem;">Recommended Agents</h4>
+                        <p style="color: #94a3b8; margin-bottom: 1.5rem;">Based on your score, we recommend these agents to improve your maturity.</p>
+                        <a href="marketplace.html" class="btn btn-primary btn-lg">View Recommended Agents →</a>
+                    </div>
+                    <div style="background-color: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 8px; padding: 1.5rem; text-align: center;">
+                        <h4 style="color: #E2E8F0; margin-bottom: 1rem;">Export Governance Blueprint</h4>
+                        <p style="color: #94a3b8; margin-bottom: 1.5rem;">Download your personalized governance blueprint as a PDF for your team.</p>
+                        <a href="#" class="btn btn-outline-white btn-lg">Export PDF →</a>
+                        <a href="#" class="btn btn-outline-white btn-lg" style="margin-top: 1rem;">Generate Model Card →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Governance Frameworks Section -->
+        <section style="margin-top: 4rem;">
+            <div class="section-header">
+                <h2 class="section-title">Governance Frameworks We Align To</h2>
+                <p class="section-lead">Your assessment maps to global AI compliance standards.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" style="background-color: #1e293b; border-color: #334155; border-radius: 8px; text-align: center;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🇪🇺</div>
+                    <h3 style="color: #E2E8F0;">EU AI Act</h3>
+                    <p style="color: #94a3b8;">Risk-based classification, transparency, and human oversight for high-risk AI systems.</p>
+                </div>
+                <div class="feature-card" style="background-color: #1e293b; border-color: #334155; border-radius: 8px; text-align: center;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📊</div>
+                    <h3 style="color: #E2E8F0;">NIST AI RMF</h3>
+                    <p style="color: #94a3b8;">Govern, Map, Measure, and Manage AI risks with structured frameworks.</p>
+                </div>
+                <div class="feature-card" style="background-color: #1e293b; border-color: #334155; border-radius: 8px; text-align: center;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔐</div>
+                    <h3 style="color: #E2E8F0;">ISO 42001</h3>
+                    <p style="color: #94a3b8;">AI Management System standards for governance and risk management.</p>
+                </div>
+                <div class="feature-card" style="background-color: #1e293b; border-color: #334155; border-radius: 8px; text-align: center;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🛡️</div>
+                    <h3 style="color: #E2E8F0;">UAE PDPL</h3>
+                    <p style="color: #94a3b8;">Personal Data Protection Law ensuring data sovereignty in UAE regions.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-tagline">Trusted by CISOs · Empowered by Engineers · Data hosted in UAE & EU</p>
+            <p class="footer-copy">&copy; 2025 CISO in the Loop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="persona-modal.js"></script>
+    <script>
+        // Simple progress bar and results toggle
+        document.getElementById('submitQuiz').addEventListener('click', function() {
+            document.querySelector('.readiness-quiz').style.display = 'none';
+            document.getElementById('resultsSection').style.display = 'block';
+            document.getElementById('progressBar').style.width = '100%';
+            document.getElementById('currentQuestion').textContent = '5';
+        });
+    </script>
+</body>
+</html>
+

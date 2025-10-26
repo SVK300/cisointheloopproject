@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights - CISOintheLoop.ai</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar sticky-header">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="CISOintheLoop.ai Logo" class="logo-image">
+                </a>
+           <div class="nav-links desktop-nav">                    <a href="index.html" class="nav-link">Home</a>                    <a href="governance-ops.html" class="nav-link">GovernanceOps</a>                    <a href="agent-ops.html" class="nav-link">AgentOps</a>                    <a href="marketplace.html" class="nav-link">Marketplace</a>                    <a href="insights.html" class="nav-link active">Insights</a>                    <a href="trust.html" class="nav-link">Trust Center</a>                </div>                <div class="nav-actions">
+                    <button class="search-icon" aria-label="Global Search">🔍</button>
+                    <a href="#" id="joinBetaNav" class="btn btn-primary btn-sm">Join Beta</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Insights & Research</h1>
+            <p>The latest in AI security, governance, and regulatory intelligence.</p>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+        <div class="filter-pills" style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 1rem;">            <button class="filter-pill active" data-filter="all" style="background: #eee; border: 1px solid #ddd; padding: 5px 10px; border-radius: 5px;">All</button>            <button class="filter-pill" data-filter="regulatory" style="background: #eee; border: 1px solid #ddd; padding: 5px 10px; border-radius: 5px;">Regulatory</button>            <button class="filter-pill" data-filter="research" style="background: #eee; border: 1px solid #ddd; padding: 5px 10px; border-radius: 5px;">Research</button>            <button class="filter-pill" data-filter="sovereignty" style="background: #eee; border: 1px solid #ddd; padding: 5px 10px; border-radius: 5px;">Data Sovereignty</button>        </div>        <div class="insights-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+            <!-- Sample Insight Card 1 -->
+            <div class="item-card">
+                <h3 class="item-title">AI Regulation Update: What CISOs Need to Know</h3>
+                <p class="item-description">A breakdown of the latest regulatory changes impacting AI security, focusing on the EU AI Act and NIST AI RMF.</p>
+                <p class="item-tagline">Regulatory · Governance</p>                <span class="data-residency-tag" style="background: #E8F9F8; color: #0F1113; padding: 0.25rem 0.5rem; border-radius: 0.375rem; font-size: 0.75rem; font-weight: 700; margin-top: 0.5rem; display: inline-block;">Tagged: Data Sovereignty</span>
+                <a href="detail-page.html" class="btn btn-outline btn-full">Read Report →</a>
+            </div>
+            <!-- Sample Insight Card 2 -->
+            <div class="item-card">
+                <h3 class="item-title">The State of Prompt Attacks 2025</h3>
+                <p class="item-description">Annual report on the evolution of prompt injection, jailbreaking, and data exfiltration techniques.</p>
+                <p class="item-tagline">Threat Intelligence · Research</p>
+                <a href="detail-page.html" class="btn btn-outline btn-full">Read Report →</a>
+            </div>
+            <!-- Sample Insight Card 3 -->
+            <div class="item-card">
+                <h3 class="item-title">Operationalizing AI Security in CI/CD</h3>
+                <p class="item-description">A practical guide for developers and security engineers on integrating AI security checks into the development pipeline.</p>
+                <p class="item-tagline">Builder · AgentOps</p>
+                <a href="detail-page.html" class="btn btn-outline btn-full">Read Guide →</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-tagline">“AI Security for Every Professional.”</p>
+            
+            <p class="footer-copy">&copy; 2025 CISO in the Loop. All rights reserved. | Data hosted in UAE and EU regions.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="persona-modal.js"></script>
+</body>
+</html>

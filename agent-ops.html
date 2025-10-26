@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentOps - CISOintheLoop.ai</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar sticky-header">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="CISOintheLoop.ai Logo" class="logo-image">
+                </a>
+                <div class="nav-links desktop-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="governance-ops.html" class="nav-link">GovernanceOps</a>
+                    <a href="agent-ops.html" class="nav-link active">AgentOps</a>
+                    <a href="marketplace.html" class="nav-link">Marketplace</a>
+                    <a href="insights.html" class="nav-link">Insights</a>
+                    <a href="trust.html" class="nav-link">Trust Center</a>
+                </div>
+                <div class="nav-actions">
+                    <button class="search-icon" aria-label="Global Search">🔍</button>
+                    <a href="#" id="joinBetaNav" class="btn btn-primary btn-sm">Join Beta</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>AgentOps</h1>
+            <p class="section-lead">Build, chain, and deploy AI Security Agents.</p>
+            <p style="color: #94a3b8; margin-top: 0.5rem;">Publish to the marketplace and earn trust from the CISO community.</p>
+        </div>
+    </header>
+
+    <main class="container section">
+        <!-- Hero Section -->
+        <section style="margin-bottom: 4rem; text-align: center;">
+            <h2 style="color: #E2E8F0; margin-bottom: 1rem;">Your Developer Workbench</h2>
+            <p style="color: #94a3b8; max-width: 600px; margin: 0 auto 2rem;">AgentOps is your console for building, chaining, and deploying security agents. Validate against compliance frameworks, then publish to the marketplace.</p>
+        </section>
+
+        <!-- Workflow Diagram -->
+        <section style="margin-bottom: 4rem;">
+            <div class="section-header">
+                <h2 class="section-title">Agent Development Workflow</h2>
+                <p class="section-lead">From idea to marketplace in four steps.</p>
+            </div>
+            <div class="ai-capabilities-grid">
+                <div class="capability-step">
+                    <div class="capability-step-icon">1</div>
+                    <h4>Build</h4>
+                    <p style="color: #94a3b8;">Write your agent logic, define inputs/outputs, and test locally.</p>
+                </div>
+                <div class="capability-step">
+                    <div class="capability-step-icon">2</div>
+                    <h4>Chain</h4>
+                    <p style="color: #94a3b8;">Orchestrate multiple agents with visual drag-and-drop chaining.</p>
+                </div>
+                <div class="capability-step">
+                    <div class="capability-step-icon">3</div>
+                    <h4>Validate</h4>
+                    <p style="color: #94a3b8;">Run compliance checks against EU AI Act, NIST RMF, and ISO 42001.</p>
+                </div>
+                <div class="capability-step">
+                    <div class="capability-step-icon">4</div>
+                    <h4>Publish</h4>
+                    <p style="color: #94a3b8;">Submit to marketplace and earn trust scores from CISO reviews.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Integrations Section -->
+        <section style="margin-bottom: 4rem;">
+            <div class="section-header">
+                <h2 class="section-title">Integrations & APIs</h2>
+                <p class="section-lead">Connect to the tools and services your agents need.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" style="background-color: #1e293b; border-color: #334155; border-radius: 8px;">
+                    <div class="feature-icon" style="color: #2563eb; background: rgba(37, 99, 235, 0.1);">🧠</div>
+                    <h3 style="color: #E2E8F0;">LLM Providers</h3>
+                    <p style="color: #94a3b8;">OpenAI (GPT-4), Anthropic (Claude), Google (Gemini), and more. Sandbox environments for safe testing.</p>
+                </div>
+                <div class="feature-card" style="background-color: #1e293b; border-color: #334155; border-radius: 8px;">
+                    <div class="feature-icon" style="color: #10b981; background: rgba(16, 185, 129, 0.1);">🔐</div>
+                    <h3 style="color: #E2E8F0;">Security APIs</h3>
+                    <p style="color: #94a3b8;">Integrate with SIEM, SOAR, threat intelligence, and compliance platforms.</p>
+                </div>
+                <div class="feature-card" style="background-color: #1e293b; border-color: #334155; border-radius: 8px;">
+                    <div class="feature-icon" style="color: #f59e0b; background: rgba(245, 158, 11, 0.1);">📊</div>
+                    <h3 style="color: #E2E8F0;">Analytics & Logging</h3>
+                    <p style="color: #94a3b8;">Send agent metrics to your analytics platform for monitoring and reporting.</p>
+                </div>
+                <div class="feature-card" style="background-color: #1e293b; border-color: #334155; border-radius: 8px;">
+                    <div class="feature-icon" style="color: #ec4899; background: rgba(236, 72, 153, 0.1);">🔌</div>
+                    <h3 style="color: #E2E8F0;">Webhooks & SDKs</h3>
+                    <p style="color: #94a3b8;">Use our REST API, Python SDK, or webhooks to integrate agents into your workflows.</p>
+                </div>
+                <div class="feature-card" style="background-color: #1e293b; border-color: #334155; border-radius: 8px;">
+                    <div class="feature-icon" style="color: #06b6d4; background: rgba(6, 182, 212, 0.1);">☁️</div>
+                    <h3 style="color: #E2E8F0;">Cloud Platforms</h3>
+                    <p style="color: #94a3b8;">Deploy to AWS, Azure, GCP, or on-premises with our deployment templates.</p>
+                </div>
+                <div class="feature-card" style="background-color: #1e293b; border-color: #334155; border-radius: 8px;">
+                    <div class="feature-icon" style="color: #8b5cf6; background: rgba(139, 92, 246, 0.1);">🛠️</div>
+                    <h3 style="color: #E2E8F0;">Developer Tools</h3>
+                    <p style="color: #94a3b8;">Git integration, CI/CD pipelines, local testing, and debugging tools.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section style="margin-bottom: 4rem; text-align: center; background-color: rgba(37, 99, 235, 0.05); padding: 3rem; border-radius: 8px; border: 1px solid rgba(37, 99, 235, 0.2);">
+            <h3 style="color: #E2E8F0; margin-bottom: 1.5rem;">Ready to build your first agent?</h3>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#" class="btn btn-primary btn-lg">Start Building →</a>
+                <a href="#" class="btn btn-outline-white btn-lg">Join Developer Beta →</a>
+            </div>
+            <p style="color: #94a3b8; margin-top: 2rem; font-size: 0.9rem;">Have questions? Check our <a href="#" style="color: #2563eb;">Developer Docs</a> or join our <a href="#" style="color: #2563eb;">Slack Community</a>.</p>
+        </section>
+
+        <!-- Marketplace CTA -->
+        <div style="text-align: center; margin-top: 4rem;">
+            <h3 style="color: #E2E8F0; margin-bottom: 1rem;">Explore agents built by other developers</h3>
+            <a href="marketplace.html" class="btn btn-outline-white btn-lg">Browse Marketplace →</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-tagline">Trusted by CISOs · Empowered by Engineers · Data hosted in UAE & EU</p>
+            <p class="footer-copy">&copy; 2025 CISO in the Loop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="persona-modal.js"></script>
+</body>
+</html>
+
